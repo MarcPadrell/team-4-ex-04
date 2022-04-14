@@ -60,7 +60,25 @@ public class Raices {
 			System.out.println("No existe solucion");
 
 		}
-
+		
+	}
+	
+	public void ObtenerRaices() {
+		  
+		double x1 = ((-this.b) + Math.sqrt(Math.pow(this.b, 2) - (4 * this.a * this.c))) / (2 * this.a);
+		
+		 double x2=  ((-this.b) - Math.sqrt(Math.pow(this.b, 2) - (4 * this.a * this.c))) / (2 * this.a);
+		
+		 System.out.println("Solucin de las dos raices: " +x1+ "" +x2);
+	}
+	
+    public void ObtenerRaiz() {
+      
+    	double x=0;
+    	
+    	 x = ((-this.b) + Math.sqrt(Math.pow(this.b, 2) - (4 * this.a * this.c))) / (2 * this.a);
+    	
+    	 System.out.println("Solucion de las dos raices: " +x);
 	}
 
 }
