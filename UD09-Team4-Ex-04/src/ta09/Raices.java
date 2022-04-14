@@ -7,7 +7,7 @@ public class Raices {
 	private double c;
 
 	public Raices() {
-		this(0.0,0.0,0.0);
+		this(0.0, 0.0, 0.0);
 	}
 
 	public Raices(double a, double b, double c) {
@@ -15,11 +15,11 @@ public class Raices {
 		this.b = b;
 		this.c = c;
 	}
-	
-	public double getDiscriminante(){
-		return (Math.pow(this.b,2))-4*this.a*this.c;
+
+	public double getDiscriminante() {
+		return (Math.pow(this.b, 2)) - 4 * this.a * this.c;
 	}
-	
+
 	public boolean tieneRaices() {
 		if (getDiscriminante() >= 0) {
 			return true;
@@ -27,9 +27,40 @@ public class Raices {
 			return false;
 		}
 	}
-	
+
 	public void obtenerRaices() {
-		
+
+	}
+
+	public boolean tieneRaiz() {
+
+		if (getDiscriminante() == 0) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+	public void calcular() {
+
+		if (tieneRaices()) {
+
+			System.out.println("Tenemos dos posibles soluciones!");
+			System.out.println("Solución 1: " + ((-this.b + Math.sqrt(getDiscriminante())) / 2 * this.a));
+			System.out.println("Solución 2: " + ((-this.b - Math.sqrt(getDiscriminante())) / 2 * this.a));
+
+		} else if (tieneRaiz()) {
+
+			System.out.println("Solución: " + ((-this.b + Math.sqrt(getDiscriminante())) / 2 * this.a));
+			System.out.println("Tenemos una única solución!");
+
+		} else {
+
+			System.out.println("No existe solución");
+
+		}
+
 	}
 
 }
