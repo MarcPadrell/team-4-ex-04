@@ -1,6 +1,6 @@
 package ta09;
 
-public class Raices {
+public class Raices implements Raicable{
 
 	private double a;
 	private double b;
@@ -17,19 +17,15 @@ public class Raices {
 	}
 
 	public double getDiscriminante() {
-		return (Math.pow(this.b, 2)) - 4 * this.a * this.c;
+		return ((Math.pow(this.b, 2)) - (4 * this.a * this.c));
 	}
 
 	public boolean tieneRaices() {
-		if (getDiscriminante() >= 0) {
+		if (getDiscriminante() > 0) {
 			return true;
 		} else {
 			return false;
 		}
-	}
-
-	public void obtenerRaices() {
-
 	}
 
 	public boolean tieneRaiz() {
@@ -47,12 +43,12 @@ public class Raices {
 		if (tieneRaices()) {
 
 			System.out.println("Tenemos dos posibles soluciones: ");
-			System.out.println("Solucion 1: " + ((-this.b + Math.sqrt(getDiscriminante())) / 2 * this.a));
-			System.out.println("Solucion 2: " + ((-this.b - Math.sqrt(getDiscriminante())) / 2 * this.a));
+			System.out.println("Solucion 1: " + ((-this.b + Math.sqrt(getDiscriminante())) / (2 * this.a)));
+			System.out.println("Solucion 2: " + ((-this.b - Math.sqrt(getDiscriminante())) / (2 * this.a)));
 
 		} else if (tieneRaiz()) {
 
-			System.out.println("Solucion: " + ((-this.b + Math.sqrt(getDiscriminante())) / 2 * this.a));
+			System.out.println("Solucion: " + ((-this.b + Math.sqrt(getDiscriminante())) / (2 * this.a)));
 			System.out.println("Tenemos una unica solucion!");
 
 		} else {
@@ -60,25 +56,33 @@ public class Raices {
 			System.out.println("No existe solucion");
 
 		}
-		
+
 	}
-	
+
 	public void ObtenerRaices() {
-		  
-		double x1 = ((-this.b) + Math.sqrt(Math.pow(this.b, 2) - (4 * this.a * this.c))) / (2 * this.a);
-		
-		 double x2=  ((-this.b) - Math.sqrt(Math.pow(this.b, 2) - (4 * this.a * this.c))) / (2 * this.a);
-		
-		 System.out.println("Solucin de las dos raices: " +x1+ "" +x2);
+
+		if (tieneRaices()) {
+
+			double x1 = ((-this.b) + Math.sqrt(Math.pow(this.b, 2) - (4 * this.a * this.c))) / (2 * this.a);
+
+			double x2 = ((-this.b) - Math.sqrt(Math.pow(this.b, 2) - (4 * this.a * this.c))) / (2 * this.a);
+
+			System.out.println("Solucion de las dos raices: " + x1 + " y " + x2);
+
+		}
 	}
-	
-    public void ObtenerRaiz() {
-      
-    	double x=0;
-    	
-    	 x = ((-this.b) + Math.sqrt(Math.pow(this.b, 2) - (4 * this.a * this.c))) / (2 * this.a);
-    	
-    	 System.out.println("Solucion de las dos raices: " +x);
+
+	public void ObtenerRaiz() {
+
+		double x = 0;
+
+		if (tieneRaiz()) {
+
+			x = ((-this.b) + Math.sqrt(Math.pow(this.b, 2) - (4 * this.a * this.c))) / (2 * this.a);
+
+			System.out.println("Solucion de la raiz: " + x);
+
+		}
 	}
 
 }
