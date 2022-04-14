@@ -15,5 +15,21 @@ public class Raices {
 		this.b = b;
 		this.c = c;
 	}
+	
+	public double getDiscriminante(){
+		return (Math.pow(this.b,2))-4*this.a*this.c;
+	}
+	
+	public boolean tieneRaices() {
+		if (getDiscriminante() >= 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public void obtenerRaices() {
+		
+	}
 
 }
