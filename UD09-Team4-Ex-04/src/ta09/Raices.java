@@ -46,18 +46,18 @@ public class Raices {
 
 		if (tieneRaices()) {
 
-			System.out.println("Tenemos dos posibles soluciones!");
-			System.out.println("Solución 1: " + ((-this.b + Math.sqrt(getDiscriminante())) / 2 * this.a));
-			System.out.println("Solución 2: " + ((-this.b - Math.sqrt(getDiscriminante())) / 2 * this.a));
+			System.out.println("Tenemos dos posibles soluciones: ");
+			System.out.println("Solucion 1: " + ((-this.b + Math.sqrt(getDiscriminante())) / 2 * this.a));
+			System.out.println("Solucion 2: " + ((-this.b - Math.sqrt(getDiscriminante())) / 2 * this.a));
 
 		} else if (tieneRaiz()) {
 
-			System.out.println("Solución: " + ((-this.b + Math.sqrt(getDiscriminante())) / 2 * this.a));
-			System.out.println("Tenemos una única solución!");
+			System.out.println("Solucion: " + ((-this.b + Math.sqrt(getDiscriminante())) / 2 * this.a));
+			System.out.println("Tenemos una unica solucion!");
 
 		} else {
 
-			System.out.println("No existe solución");
+			System.out.println("No existe solucion");
 
 		}
 
