@@ -9,24 +9,24 @@ public class RaicesApp {
 
 		System.out.println("RAIZ 1");
 		raiz1.calcular();
-		raiz1.ObtenerRaices();
-		raiz1.ObtenerRaiz();
+		raiz1.obtenerRaices();
+		raiz1.obtenerRaiz();
 		
 		// Cramos la segunda raiz
 		Raices raiz2 = new Raices(1, -2, 1);
 
 		System.out.println("\nRAIZ 2");
 		raiz2.calcular();
-		raiz2.ObtenerRaices();
-		raiz2.ObtenerRaiz();
+		raiz2.obtenerRaices();
+		raiz2.obtenerRaiz();
 		
 		// Creamos la tercera raiz
 		Raices raiz3 = new Raices(7, 0, 5);
 
 		System.out.println("\nRAIZ 3");
 		raiz3.calcular();
-		raiz3.ObtenerRaices();
-		raiz3.ObtenerRaiz();
+		raiz3.obtenerRaices();
+		raiz3.obtenerRaiz();
 
 	}
 

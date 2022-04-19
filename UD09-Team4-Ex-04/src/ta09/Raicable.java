@@ -10,8 +10,8 @@ public interface Raicable {
 
 	public void calcular();
 
-	public void ObtenerRaices();
+	public void obtenerRaices();
 
-	public void ObtenerRaiz();
+	public void obtenerRaiz();
 
 }

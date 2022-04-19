@@ -2,7 +2,7 @@ package ta09;
 
 /**
  * Clase Raices que implementa la interficie Raicable
- * @author marcp
+ * @author marc padrell, marc nebot, borja montseny
  *
  */
 public class Raices implements Raicable {
@@ -81,7 +81,7 @@ public class Raices implements Raicable {
 	/**
 	 * Si la ecuacion tiene dos raices como solución las mostramos.
 	 */
-	public void ObtenerRaices() {
+	public void obtenerRaices() {
 
 		if (tieneRaices()) {
 
@@ -97,7 +97,7 @@ public class Raices implements Raicable {
 	/**
 	 * Si la ecuacion tiene una raiz como solucion la mostramos.
 	 */
-	public void ObtenerRaiz() {
+	public void obtenerRaiz() {
 
 		double x = 0;
 
