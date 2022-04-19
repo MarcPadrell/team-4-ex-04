@@ -1,25 +1,38 @@
 package ta09;
 
-public class Raices implements Raicable{
+/**
+ * Clase Raices que implementa la interficie Raicable
+ * @author marcp
+ *
+ */
+public class Raices implements Raicable {
 
 	private double a;
 	private double b;
 	private double c;
-
+	
+	// Constructor por defecto
 	public Raices() {
 		this(0.0, 0.0, 0.0);
 	}
-
+	
+	// Constructor con los tres coeficientes
 	public Raices(double a, double b, double c) {
 		this.a = a;
 		this.b = b;
 		this.c = c;
 	}
-
+	
+	/**
+	 * Metodo para saber el valor del discriminante
+	 */
 	public double getDiscriminante() {
 		return ((Math.pow(this.b, 2)) - (4 * this.a * this.c));
 	}
-
+	
+	/**
+	 * Metodo que nos devuelve true si hay más de dos soluciones
+	 */
 	public boolean tieneRaices() {
 		if (getDiscriminante() > 0) {
 			return true;
@@ -27,7 +40,10 @@ public class Raices implements Raicable{
 			return false;
 		}
 	}
-
+	
+	/**
+	 * Metodo para saber si la ecuacion solo tiene una solucion
+	 */
 	public boolean tieneRaiz() {
 
 		if (getDiscriminante() == 0) {
@@ -37,7 +53,10 @@ public class Raices implements Raicable{
 		}
 
 	}
-
+	
+	/**
+	 * Calculamos el resultado de la ecuacion de segundo grado diferenciando si tiene más de una solución o no
+	 */
 	public void calcular() {
 
 		if (tieneRaices()) {
@@ -58,7 +77,10 @@ public class Raices implements Raicable{
 		}
 
 	}
-
+	
+	/**
+	 * Si la ecuacion tiene dos raices como solución las mostramos.
+	 */
 	public void ObtenerRaices() {
 
 		if (tieneRaices()) {
@@ -71,7 +93,10 @@ public class Raices implements Raicable{
 
 		}
 	}
-
+	
+	/**
+	 * Si la ecuacion tiene una raiz como solucion la mostramos.
+	 */
 	public void ObtenerRaiz() {
 
 		double x = 0;
